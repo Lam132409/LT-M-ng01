@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT5</title>
+</head>
+<body>
+<script>
+    function Find (k) {
+        let flag = false;
+        let b = '0123456789';
+        for (let i = 0; i < b.length; i++) {
+            if (n == b[i]) {
+                flag = true;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    let a = '';
+    a += prompt('Nhập');
+    let count = 0;
+
+    for (let i = 0; i < a.length; i++) {
+        if ((a[i] == "-") && (Find(a[i + 1]) == true)) {
+            count++;
+        }
+    }
+    alert('Có ' + count + ' số âm');
+</script>
+</body>
+</html>
