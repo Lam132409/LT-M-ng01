@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT6</title>
+</head>
+<body>
+<button onclick="myCheck()">Kiểm tra</button>
+<p id="number"></p>
+<script>
+    let n = +prompt('Nhập số phần tử ');
+    parseInt(n);
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = +prompt('Nhập số thứ ' + (i + 1));
+    }
+    document.getElementById("input").innerHTML = a;
+    let v = +prompt('Nhập số bạn muốn kiểm tra');
+
+    function myCheck() {
+        let flag = -1;
+        for (let i = 0; i < a.length; i++) {
+            if (v == a[i]) {
+                flag = i;
+                break;
+            }
+        }
+        flag+=1;
+        if (flag !== 0) {
+            document.getElementById("number").innerHTML= v + " is in the array";
+        } else document.getElementById("number").innerHTML = v + " is not in the array";
+        ;
+    }
+</script>
+</body>
+</html>
